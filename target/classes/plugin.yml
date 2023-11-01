@@ -1,0 +1,5 @@
+name: "nAddon"
+version: "1.0.0"
+main: "cc.chocomint.nAddon.Main"
+depend: [Skript]
+api-version: 1.8
