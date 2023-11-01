@@ -1,1 +1,9 @@
+cc\chocomint\nAddon\elements\effects\scoreboard\CreatePlayerSidebar.class
 cc\chocomint\nAddon\Main.class
+cc\chocomint\nAddon\elements\effects\AttackEntity.class
+cc\chocomint\nAddon\elements\effects\ConnectServer.class
+cc\chocomint\nAddon\register\ClassRegister.class
+cc\chocomint\nAddon\elements\effects\ClientBlock.class
+cc\chocomint\nAddon\elements\effects\ClearAllPotionEffects.class
+cc\chocomint\nAddon\listener\EventListener.class
+cc\chocomint\nAddon\listener\MessageListener.class

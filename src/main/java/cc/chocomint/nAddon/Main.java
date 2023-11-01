@@ -2,9 +2,11 @@ package cc.chocomint.nAddon;
 
 import java.io.IOException;
 
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import cc.chocomint.nAddon.listener.EventListener;
+import cc.chocomint.nAddon.listener.MessageListener;
 import cc.chocomint.nAddon.register.ClassRegister;
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
@@ -34,7 +36,8 @@ public class Main extends JavaPlugin{
 		saveDefaultConfig();
 		
 		getServer().getPluginManager().registerEvents(new EventListener(), getPlugin());
-		
+		getServer().getMessenger().registerOutgoingPluginChannel((Plugin)this, "BungeeCord");
+		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
 		
 		Skript.registerAddon(this);
 		
