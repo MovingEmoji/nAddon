@@ -6,6 +6,7 @@ import org.bukkit.scoreboard.Team;
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.registrations.Classes;
 import net.citizensnpcs.Citizens;
+import net.citizensnpcs.api.npc.NPC;
 
 public class ClassRegister {
 	
@@ -13,7 +14,7 @@ public class ClassRegister {
 		
 		Classes.registerClass(new ClassInfo<Scoreboard>(Scoreboard.class, "scoreboard"));
 		Classes.registerClass(new ClassInfo<Team>(Team.class, "team"));
-		Classes.registerClass(new ClassInfo<Citizens>(Citizens.class, "citizen"));
+		Classes.registerClass(new ClassInfo<NPC>(NPC.class, "npc"));
 		
 	}
 }
