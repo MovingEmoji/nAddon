@@ -20,6 +20,7 @@ public class ResetPlayerSidebar extends Effect {
 	
 	static {
 		Skript.registerEffect(ResetPlayerSidebar.class, "reset %player%'s sidebar %string% at line %number%");
+		Skript.registerEffect(ResetPlayerSidebar.class, "reset sidebar of %player% %string% at line %number%");
 	}
 
 	@SuppressWarnings("unchecked")

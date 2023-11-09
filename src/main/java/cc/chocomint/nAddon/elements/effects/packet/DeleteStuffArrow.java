@@ -1,44 +1,57 @@
-package cc.chocomint.nAddon.elements.effects;
+package cc.chocomint.nAddon.elements.effects.packet;
 
 import javax.annotation.Nullable;
 
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
 
-public class HidePlayer extends Effect {
+public class DeleteStuffArrow extends Effect {
 	
 	private Expression<Player> ex_player;
-	private Expression<Player> ex_target;
-
+	
+	static {
+		Skript.registerEffect(DeleteStuffArrow.class, "delete %player%'s stuff arrows");
+		Skript.registerEffect(DeleteStuffArrow.class, "delete stuff arrows of %player%");
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean init(Expression<?>[] exprs, int matchedPattern, Kleenean isDelayed, ParseResult parseResult) {
 		
 		this.ex_player = (Expression<Player>) exprs[0];
-		this.ex_target = (Expression<Player>) exprs[1];
 		
 		return true;
 	}
 
 	@Override
 	public String toString(@Nullable Event e, boolean debug) {
-		return "HidePlayer";
+		return "RemoveStuffArrow";
 	}
 
 	@Override
 	protected void execute(Event e) {
 		
 		Player player = (Player) this.ex_player.getSingle(e);
-		Player[] targets = (Player[]) this.ex_target.getAll(e);
+		CraftPlayer cplayer = (CraftPlayer) player;
 		
-		for(Player target : targets) {
-			target.hidePlayer(player);
+		if(player != null) {
+			try {
+				
+				cplayer.getHandle().getDataWatcher().watch(9, Byte.valueOf((byte) 0));
+				
+			} catch(Exception exception) {
+				
+				exception.printStackTrace();
+			}
 		}
+		
 	}
 
 }

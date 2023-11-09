@@ -39,12 +39,12 @@ public class Main extends JavaPlugin{
 		getServer().getMessenger().registerOutgoingPluginChannel((Plugin)this, "BungeeCord");
 		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
 		
-		Skript.registerAddon(this);
+		Addon = Skript.registerAddon(this);
 		
 		ClassRegister.registerAllSkriptClasses();
 		
 		try {
-			getAddon().loadClasses("com.nagua.npatch.elements", new String[0]);
+			Addon.loadClasses("cc.chocomint.nAddon.elements", new String[0]);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

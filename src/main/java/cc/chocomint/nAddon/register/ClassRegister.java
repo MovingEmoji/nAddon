@@ -5,7 +5,6 @@ import org.bukkit.scoreboard.Team;
 
 import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.registrations.Classes;
-import net.citizensnpcs.Citizens;
 import net.citizensnpcs.api.npc.NPC;
 
 public class ClassRegister {
