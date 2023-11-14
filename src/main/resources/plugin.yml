@@ -1,5 +1,9 @@
 name: "nAddon"
 version: "${project.version}"
+description: Emotional addon for new generation Practice server
+author: Naoya
+website: https://twitter.com/MovingEmoji_
 main: "cc.chocomint.nAddon.Main"
 depend: ["Skript"]
 api-version: 1.8
+prefix: nAddon

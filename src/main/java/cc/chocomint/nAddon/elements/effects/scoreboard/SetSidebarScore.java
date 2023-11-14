@@ -57,6 +57,7 @@ public class SetSidebarScore extends Effect {
 			team.addEntry(name);
 			player.getScoreboard().getObjective(DisplaySlot.SIDEBAR).getScore(name).setScore(line.intValue());
 		}
+		team.setSuffix(value);
 	}
 
 }

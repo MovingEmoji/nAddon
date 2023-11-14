@@ -32,6 +32,13 @@ public class ItemDamageEvent extends SkriptEvent {
 				return event.getPlayer();
 			}
 		}, 0);
+		
+		EventValues.registerEventValue(PlayerItemDamageEvent.class, Number.class, new Getter<Number, PlayerItemDamageEvent>() {
+			@Nullable
+			public Number get(PlayerItemDamageEvent event) {
+				return new Integer(event.getDamage());
+			}
+		}, 0);
 	}
 
 	@Override

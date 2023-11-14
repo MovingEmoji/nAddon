@@ -20,7 +20,7 @@ public class CreatePlayerSidebar extends Effect {
 	private Expression<String> ex_string;
 	
 	static {
-		Skript.registerEffect(CreatePlayerSidebar.class, "reate %player%'s sidebar named %string%");
+		Skript.registerEffect(CreatePlayerSidebar.class, "create %player%'s sidebar named %string%");
 	}
 
 	@SuppressWarnings("unchecked")

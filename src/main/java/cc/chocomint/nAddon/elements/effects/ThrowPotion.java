@@ -2,13 +2,11 @@ package cc.chocomint.nAddon.elements.effects;
 
 import javax.annotation.Nullable;
 
-import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftThrownPotion;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.ThrownPotion;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.Potion;
 
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
