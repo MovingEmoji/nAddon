@@ -6,6 +6,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -20,6 +21,7 @@ public class EnchantLevel extends SimpleExpression<Number> {
 	
 	static {
 		Skript.registerExpression(EnchantLevel.class, Number.class, ExpressionType.COMBINED, "enchant[ment] level (from|of) %enchantment% (of|in|on) %itemstack%");
+		Main.Expressions ++;
 	}
  
 	@Override

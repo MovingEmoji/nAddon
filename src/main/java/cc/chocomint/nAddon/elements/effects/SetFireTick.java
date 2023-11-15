@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class SetFireTick extends Effect {
 	static {
 		Skript.registerEffect(SetFireTick.class, "set %player%'s fire tick to %number%");
 		Skript.registerEffect(SetFireTick.class, "set fire tick of %player% to %number%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

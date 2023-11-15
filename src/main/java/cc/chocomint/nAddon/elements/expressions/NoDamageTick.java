@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -19,6 +20,7 @@ public class NoDamageTick extends SimpleExpression<Number> {
 	static {
 		Skript.registerExpression(NoDamageTick.class, Number.class, ExpressionType.COMBINED, "%livingentity%'s damage delay");
 		Skript.registerExpression(NoDamageTick.class, Number.class, ExpressionType.COMBINED, "damage delay of %livingentity%");
+		Main.Expressions ++;
 	}
 
 	@Override

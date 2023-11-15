@@ -9,6 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectOutputStream;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -22,6 +23,7 @@ public class StringFromItem extends SimpleExpression<String> {
 	
 	static {
 		Skript.registerExpression(StringFromItem.class, String.class, ExpressionType.COMBINED, "string from item %itemstack%");
+		Main.Expressions ++;
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.potion.PotionEffect;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class ClearAllPotionEffects extends Effect {
 	static {
 		Skript.registerEffect(ClearAllPotionEffects.class, "clear %player%'s potion effects");
 		Skript.registerEffect(ClearAllPotionEffects.class, "clear potion effects of %player%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

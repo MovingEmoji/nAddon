@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -20,6 +21,7 @@ public class ChangeWorld extends SimpleExpression<Location> {
 	
 	static {
 		Skript.registerExpression(ChangeWorld.class, Location.class, ExpressionType.COMBINED, "change world %location% to %world%");
+		Main.Expressions ++;
 	}
 
 	@Override

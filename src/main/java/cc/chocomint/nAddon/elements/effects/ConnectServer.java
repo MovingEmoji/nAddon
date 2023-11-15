@@ -23,6 +23,7 @@ public class ConnectServer extends Effect {
 	
 	static {
 		Skript.registerEffect(ConnectServer.class, "send %players% to server %string%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import cc.chocomint.nAddon.elements.ElementsCounter;
 import cc.chocomint.nAddon.listener.EventListener;
 import cc.chocomint.nAddon.listener.MessageListener;
 import cc.chocomint.nAddon.register.ClassRegister;
@@ -16,10 +17,9 @@ public class Main extends JavaPlugin{
 	
 	private static SkriptAddon Addon;
 	
-	private static Javalin WebApp;
-	
 	public static boolean swm;
 	
+	public static int Effects, Events, Expressions;
 	
 	public static Main getPlugin() {
 		
@@ -34,14 +34,6 @@ public class Main extends JavaPlugin{
 		return Addon;
 	}
 	
-	public static Javalin getWebApp() {
-		
-		if(WebApp == null) {
-			WebApp = ClassRegister.registerJavalin();
-		}
-		return WebApp;
-	}
-	
 	@Override
 	public void onEnable() {
 		
@@ -52,9 +44,10 @@ public class Main extends JavaPlugin{
 		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
 		
 		Addon = Skript.registerAddon(this);
-		WebApp = ClassRegister.registerJavalin();
 		
 		ClassRegister.registerAllSkriptClasses();
+		
+		Effects = Events = Expressions = 0;
 		
 		try {
 			Addon.loadClasses("cc.chocomint.nAddon.elements", new String[0]);
@@ -62,7 +55,6 @@ public class Main extends JavaPlugin{
 			e.printStackTrace();
 		}
 		
-		WebApp.get("/", ctx -> ctx.result("Hello World!"));
-		
+		ElementsCounter.infoElements();
 	}
 }

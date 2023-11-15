@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Team;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class TeamPrefix extends SimpleExpression<String> {
 	static {
 		Skript.registerExpression(TeamPrefix.class, String.class, ExpressionType.COMBINED, "prefix of team %team%");
 		Skript.registerExpression(TeamPrefix.class, String.class, ExpressionType.COMBINED, "team %team%'s prefix");
+		Main.Expressions ++;
 	}
 
 	@Override

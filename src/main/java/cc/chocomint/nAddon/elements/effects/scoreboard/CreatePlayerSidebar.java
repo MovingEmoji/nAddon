@@ -8,6 +8,7 @@ import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class CreatePlayerSidebar extends Effect {
 	
 	static {
 		Skript.registerEffect(CreatePlayerSidebar.class, "create %player%'s sidebar named %string%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

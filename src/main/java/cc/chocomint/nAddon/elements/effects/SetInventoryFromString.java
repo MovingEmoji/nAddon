@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -23,6 +24,7 @@ public class SetInventoryFromString extends Effect {
 	
 	static {
 		Skript.registerEffect(SetInventoryFromString.class, "set %inventory% to inventory from string %string%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.lang.Expression;
@@ -18,6 +19,7 @@ public class EventItemDamage extends SimpleExpression<Number> {
 	
 	static {
 		Skript.registerExpression(EventItemDamage.class, Number.class, ExpressionType.SIMPLE, "item damage");
+		Main.Expressions ++;
 	}
 
 	@Override

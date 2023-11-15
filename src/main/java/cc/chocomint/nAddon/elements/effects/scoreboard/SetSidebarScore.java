@@ -7,6 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Team;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -23,6 +24,7 @@ public class SetSidebarScore extends Effect {
 	static {
 		Skript.registerEffect(SetSidebarScore.class, "set %player%'s sidebar %string% to %string% at line %number%");
 		Skript.registerEffect(SetSidebarScore.class, "set sidebar of %player% %string% to %string% at line %number%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -45,10 +47,10 @@ public class SetSidebarScore extends Effect {
 	@Override
 	protected void execute(Event e) {
 		
-		Player player = (Player) ex_player.getSingle(e);
-		String name = (String) ex_name.getSingle(e);
-		String value = (String) ex_value.getSingle(e);
-		Number line = (Number) ex_line.getSingle(e);
+		Player player = (Player) this.ex_player.getSingle(e);
+		String name = (String) this.ex_name.getSingle(e);
+		String value = (String) this.ex_value.getSingle(e);
+		Number line = (Number) this.ex_line.getSingle(e);
 		
 		Team team = player.getScoreboard().getTeam("scoreboard-" + line);
 		

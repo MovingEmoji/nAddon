@@ -24,6 +24,7 @@ public class CreateNPC extends Effect {
 	static {
 		if(Main.getPlugin().getConfig().getBoolean("citizen") == true) {
 			Skript.registerEffect(CreateNPC.class, "create npc named %string% [with type %entitytype%] at %location%");
+			Main.Effects ++;
 		}
 	}
 

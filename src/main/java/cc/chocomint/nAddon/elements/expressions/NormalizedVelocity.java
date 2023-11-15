@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.event.Event;
 import org.bukkit.util.Vector;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -18,6 +19,7 @@ public class NormalizedVelocity extends SimpleExpression<Vector> {
 	
 	static {
 		Skript.registerExpression(NormalizedVelocity.class, Vector.class, ExpressionType.COMBINED, "normalized value of %vector%");
+		Main.Expressions ++;
 	}
 
 	@Override

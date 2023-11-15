@@ -26,6 +26,7 @@ public class LoadTemplateWorld extends Effect {
 	static {
 		if(Main.getPlugin().getConfig().getBoolean("slimeworld") == true) {
 			Skript.registerEffect(LoadTemplateWorld.class, "load template world %string% from %string%");
+			Main.Effects ++;
 		}
 	}
 	

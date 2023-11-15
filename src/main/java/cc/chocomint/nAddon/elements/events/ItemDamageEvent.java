@@ -7,6 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -34,11 +35,14 @@ public class ItemDamageEvent extends SkriptEvent {
 		}, 0);
 		
 		EventValues.registerEventValue(PlayerItemDamageEvent.class, Number.class, new Getter<Number, PlayerItemDamageEvent>() {
+			@SuppressWarnings("deprecation")
 			@Nullable
 			public Number get(PlayerItemDamageEvent event) {
 				return new Integer(event.getDamage());
 			}
 		}, 0);
+		
+		Main.Events ++;
 	}
 
 	@Override

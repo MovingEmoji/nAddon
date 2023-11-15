@@ -6,6 +6,7 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class PlaySound extends Effect{
 	
 	static {
 		Skript.registerEffect(PlaySound.class, "play %string% to %players% at volume %number% [with pitch %number%]");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

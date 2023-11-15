@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class SetTabName extends Effect {
 	static {
 		Skript.registerEffect(SetTabName.class, "set %player%'s tab name to %string%");
 		Skript.registerEffect(SetTabName.class, "set tab name of %player% to %string%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -39,8 +41,8 @@ public class SetTabName extends Effect {
 	@Override
 	protected void execute(Event e) {
 		
-		Player player = (Player) ex_player.getSingle(e);
-		String name = (String) ex_name.getSingle(e);
+		Player player = (Player) this.ex_player.getSingle(e);
+		String name = (String) this.ex_name.getSingle(e);
 		
 		player.setPlayerListName(name);
 	}

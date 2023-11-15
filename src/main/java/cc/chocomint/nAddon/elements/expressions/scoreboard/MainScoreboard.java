@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Scoreboard;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -17,6 +18,7 @@ public class MainScoreboard extends SimpleExpression<Scoreboard> {
 	
 	static {
 		Skript.registerExpression(MainScoreboard.class, Scoreboard.class, ExpressionType.COMBINED, "main scoreboard");
+		Main.Expressions ++;
 	}
 
 	@Override

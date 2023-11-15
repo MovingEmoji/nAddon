@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class SetDamageDelay extends Effect {
 	static {
 		Skript.registerEffect(SetDamageDelay.class, "set %player%'s maximum damage delay to %number%");
 		Skript.registerEffect(SetDamageDelay.class, "set maximum damage delay of %player% to %number%");
+		Main.Effects ++;
 	}
 	
 	@SuppressWarnings("unchecked")

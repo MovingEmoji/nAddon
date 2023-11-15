@@ -7,6 +7,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class HideEntity extends Effect {
 	
 	static {
 		Skript.registerEffect(HideEntity.class, "hide entity %entity% from %player%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

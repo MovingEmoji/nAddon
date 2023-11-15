@@ -9,6 +9,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.util.io.BukkitObjectOutputStream;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -22,6 +23,7 @@ public class StringInventory extends SimpleExpression<String> {
 	
 	static {
 		Skript.registerExpression(StringInventory.class, String.class, ExpressionType.COMBINED, "string inventory %inventory%");
+		Main.Expressions ++;
 	}
 
 	@Override

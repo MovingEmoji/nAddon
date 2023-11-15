@@ -7,6 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class DeletePlayerSidebar extends Effect {
 	
 	static {
 		Skript.registerEffect(DeletePlayerSidebar.class, "delete %player%'s sidebar");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

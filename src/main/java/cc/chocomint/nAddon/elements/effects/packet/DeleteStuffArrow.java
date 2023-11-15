@@ -6,6 +6,7 @@ import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class DeleteStuffArrow extends Effect {
 	static {
 		Skript.registerEffect(DeleteStuffArrow.class, "delete %player%'s stuff arrows");
 		Skript.registerEffect(DeleteStuffArrow.class, "delete stuff arrows of %player%");
+		Main.Effects ++;
 	}
 	
 	@SuppressWarnings("unchecked")

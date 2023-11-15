@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class AttackEntity extends Effect {
 	
 	static {
 		Skript.registerEffect(AttackEntity.class, "make %livingentity% attack %livingentity% by %number%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

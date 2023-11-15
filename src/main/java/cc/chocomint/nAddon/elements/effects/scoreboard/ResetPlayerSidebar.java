@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Team;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class ResetPlayerSidebar extends Effect {
 	static {
 		Skript.registerEffect(ResetPlayerSidebar.class, "reset %player%'s sidebar %string% at line %number%");
 		Skript.registerEffect(ResetPlayerSidebar.class, "reset sidebar of %player% %string% at line %number%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

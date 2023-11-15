@@ -8,6 +8,7 @@ import org.bukkit.entity.ThrownPotion;
 import org.bukkit.event.Event;
 import org.bukkit.inventory.ItemStack;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -21,6 +22,7 @@ public class ThrowPotion extends Effect {
 	
 	static {
 		Skript.registerEffect(ThrowPotion.class, "throw potion %itemstack% from %entity%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

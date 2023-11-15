@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -18,6 +19,7 @@ public class HidePlayer extends Effect {
 	
 	static {
 		Skript.registerEffect(HidePlayer.class, "hide %player% from %players%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")

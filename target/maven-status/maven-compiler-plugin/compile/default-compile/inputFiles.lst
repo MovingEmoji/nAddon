@@ -8,7 +8,10 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\Set
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\serializer\ItemFromString.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\listener\MessageListener.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\ClientBlock.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\json\PutValue.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\scoreboard\CreatePlayerSidebar.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\json\JsonValue.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\ElementsCounter.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\serializer\StringInventory.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\EnchantLevel.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\LoadTemplateWorld.java
@@ -16,6 +19,7 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\serializer\ItemsFromString.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\scoreboard\ResetPlayerSidebar.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\ChangeWorld.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\web\RegisterWebApp.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\events\ItemDamageEvent.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\NormalizedVelocity.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\scoreboard\DeletePlayerSidebar.java
@@ -31,6 +35,7 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\AttackEntity.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\scoreboard\EntryTeam.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\DeleteStuffArrow.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\json\CreateJson.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\ConnectServer.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\ThrowPotion.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\HideEntity.java
@@ -44,7 +49,10 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\SetPlayerTime.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\citizen\NPCLookTarget.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\scoreboard\ScoreboardTeam.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\web\CloseWebApp.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\web\CreateJsonGet.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\Main.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\json\RemoveValue.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\serializer\StringFromItem.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\HidePlayer.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\event\EventVelocity.java

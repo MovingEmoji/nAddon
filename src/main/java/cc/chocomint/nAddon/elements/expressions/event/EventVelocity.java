@@ -6,6 +6,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerVelocityEvent;
 import org.bukkit.util.Vector;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.classes.Changer;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class EventVelocity extends SimpleExpression<Vector> {
 	
 	static {
 		Skript.registerExpression(EventVelocity.class, Vector.class, ExpressionType.SIMPLE, "event velocity");
+		Main.Expressions ++;
 	}
 
 	@Override

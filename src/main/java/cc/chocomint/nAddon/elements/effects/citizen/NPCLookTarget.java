@@ -21,6 +21,7 @@ public class NPCLookTarget extends Effect {
 	static {
 		if(Main.getPlugin().getConfig().getBoolean("citizen") == true) {
 			Skript.registerEffect(NPCLookTarget.class, "make %npc% look at %location%");
+			Main.Effects ++;
 		}
 	}
 

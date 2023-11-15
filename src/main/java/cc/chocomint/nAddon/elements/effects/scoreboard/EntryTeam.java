@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Team;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -19,6 +20,7 @@ public class EntryTeam extends Effect {
 	
 	static {
 		Skript.registerEffect(EntryTeam.class, "entry %player% to %team%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -39,8 +41,8 @@ public class EntryTeam extends Effect {
 	@Override
 	protected void execute(Event e) {
 		
-		Player player = (Player) ex_player.getSingle(e);
-		Team team = (Team) ex_team.getSingle(e);
+		Player player = (Player) this.ex_player.getSingle(e);
+		Team team = (Team) this.ex_team.getSingle(e);
 		
 		team.addEntry(player.getName());
 		

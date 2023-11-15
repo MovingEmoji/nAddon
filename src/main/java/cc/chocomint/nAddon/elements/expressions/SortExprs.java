@@ -11,6 +11,7 @@ import org.bukkit.event.Event;
 
 import com.google.common.collect.Lists;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -29,6 +30,7 @@ public class SortExprs extends SimpleExpression<String> {
 	
 	static {
 		Skript.registerExpression(SortExprs.class, String.class, ExpressionType.SIMPLE, "sorted %numbers% from highest to lowest with (output|format) %string%", "sorted %numbers% from lowest to highest with (output|format) %string%");
+		Main.Expressions ++;
 	}
 
 	@Override

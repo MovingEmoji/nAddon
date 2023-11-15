@@ -5,6 +5,7 @@ import javax.annotation.Nullable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -20,6 +21,7 @@ public class SetPlayerTime extends Effect {
 	static {
 		Skript.registerEffect(SetPlayerTime.class, "set %player%'s time to %time%");
 		Skript.registerEffect(SetPlayerTime.class, "set time of %player% to %time%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -40,8 +42,8 @@ public class SetPlayerTime extends Effect {
 	@Override
 	protected void execute(Event e) {
 		
-		Player player = (Player) ex_player.getSingle(e);
-		Time time = (Time) ex_time.getSingle(e);
+		Player player = (Player) this.ex_player.getSingle(e);
+		Time time = (Time) this.ex_time.getSingle(e);
 		
 		player.setPlayerTime(time.getTicks(), false);
 	}

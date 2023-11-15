@@ -8,6 +8,7 @@ import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -25,6 +26,7 @@ public class CustomTablist extends Effect {
 	
 	static {
 		Skript.registerEffect(CustomTablist.class, "set tab header to %string% and footer to %string% for %players%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -43,12 +45,13 @@ public class CustomTablist extends Effect {
 		return "CustomTablist";
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void execute(Event e) {
 		
-		String header = (String) ex_header.getSingle(e);
-		String footer = (String) ex_footer.getSingle(e);
-		Player[] players = (Player[]) ex_player.getAll(e);
+		String header = (String) this.ex_header.getSingle(e);
+		String footer = (String) this.ex_footer.getSingle(e);
+		Player[] players = (Player[]) this.ex_player.getAll(e);
 		
 		IChatBaseComponent headercomp = IChatBaseComponent.ChatSerializer.a("{\"text\": \"" + header.replace("\"", "") + "\"}");
 		IChatBaseComponent footercomp = IChatBaseComponent.ChatSerializer.a("{\"text\": \"" + footer.replace("\"", "") + "\"}");

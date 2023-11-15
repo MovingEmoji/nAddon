@@ -6,6 +6,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -17,6 +18,7 @@ public class EventHealCause extends SimpleExpression<RegainReason> {
 	
 	static {
 		Skript.registerExpression(EventHealCause.class, RegainReason.class, ExpressionType.SIMPLE, "heal cause");
+		Main.Expressions ++;
 	}
 
 	@Override

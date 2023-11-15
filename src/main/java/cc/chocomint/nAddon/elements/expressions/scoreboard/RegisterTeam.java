@@ -6,6 +6,7 @@ import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
@@ -20,6 +21,7 @@ public class RegisterTeam extends SimpleExpression<Team> {
 	
 	static {
 		Skript.registerExpression(RegisterTeam.class, Team.class, ExpressionType.COMBINED, "register team named %string% in %scoreboard%");
+		Main.Expressions ++;
 	}
 
 	@Override

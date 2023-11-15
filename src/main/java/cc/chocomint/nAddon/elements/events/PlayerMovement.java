@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Literal;
 import ch.njol.skript.lang.SkriptEvent;
@@ -23,6 +24,8 @@ public class PlayerMovement extends SkriptEvent {
 				return e.getPlayer();
 			}
 		}, 0);
+		
+		Main.Events ++;
 	}
 
 	@Override

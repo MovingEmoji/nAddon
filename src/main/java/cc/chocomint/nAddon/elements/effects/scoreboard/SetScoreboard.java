@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.scoreboard.Scoreboard;
 
+import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
 import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
@@ -20,6 +21,7 @@ public class SetScoreboard extends Effect{
 	static {
 		Skript.registerEffect(SetScoreboard.class, "set %player%'s scoreboard to %scoreboard%");
 		Skript.registerEffect(SetScoreboard.class, "set scoreboard of %player% to %scoreboard%");
+		Main.Effects ++;
 	}
 
 	@SuppressWarnings("unchecked")
