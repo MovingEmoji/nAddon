@@ -26,7 +26,7 @@ public class ClassRegister {
 		int port = Main.getPlugin().getConfig().getInt("webport");
 		
 		Thread.currentThread().setContextClassLoader(Main.class.getClassLoader());
-		Javalin app = Javalin.create().start(8080);
+		Javalin app = Javalin.create().start(port);
 		Thread.currentThread().setContextClassLoader(mainloader);
 		
 		Bukkit.getLogger().info("Starting WebApp...");

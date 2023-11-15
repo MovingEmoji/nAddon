@@ -47,6 +47,7 @@ public class EnchantLevel extends SimpleExpression<Number> {
 		return "EnchantLevel";
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected @Nullable Number[] get(Event e) {
 		
