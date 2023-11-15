@@ -40,6 +40,7 @@ public class EventItemDamage extends SimpleExpression<Number> {
 		return "EventItemDamage";
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected @Nullable Number[] get(Event e) {
 		return new Number[] {new Integer(((PlayerItemDamageEvent) e).getDamage())};
