@@ -10,10 +10,13 @@ import cc.chocomint.nAddon.listener.MessageListener;
 import cc.chocomint.nAddon.register.ClassRegister;
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
+import io.javalin.Javalin;
 
 public class Main extends JavaPlugin{
 	
 	private static SkriptAddon Addon;
+	
+	private static Javalin WebApp;
 	
 	public static boolean swm;
 	
@@ -31,6 +34,15 @@ public class Main extends JavaPlugin{
 		return Addon;
 	}
 	
+	public static Javalin getWebApp() {
+		
+		if(WebApp == null) {
+			WebApp = ClassRegister.registerJavalin();
+		}
+		return WebApp;
+	}
+	
+	@Override
 	public void onEnable() {
 		
 		saveDefaultConfig();
@@ -40,6 +52,7 @@ public class Main extends JavaPlugin{
 		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
 		
 		Addon = Skript.registerAddon(this);
+		WebApp = ClassRegister.registerJavalin();
 		
 		ClassRegister.registerAllSkriptClasses();
 		
@@ -48,6 +61,8 @@ public class Main extends JavaPlugin{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		WebApp.get("/", ctx -> ctx.result("Hello World!"));
 		
 	}
 }
