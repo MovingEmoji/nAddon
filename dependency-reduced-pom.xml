@@ -77,6 +77,12 @@
     </dependency>
     <dependency>
       <groupId>com.grinderwolf</groupId>
+      <artifactId>slimeworldmanager-api</artifactId>
+      <version>2.2.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.grinderwolf</groupId>
       <artifactId>slimeworldmanager-plugin</artifactId>
       <version>2.2.1</version>
       <scope>provided</scope>

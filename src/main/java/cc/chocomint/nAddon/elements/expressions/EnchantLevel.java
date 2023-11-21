@@ -49,14 +49,13 @@ public class EnchantLevel extends SimpleExpression<Number> {
 		return "EnchantLevel";
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	protected @Nullable Number[] get(Event e) {
 		
 		Enchantment enchant = (Enchantment) this.ex_enchant.getSingle(e);
 		ItemStack item = (ItemStack) this.ex_item.getSingle(e);
 		
-		return new Number[] {new Integer(item.getEnchantmentLevel(enchant))};
+		return new Number[] {(Number) item.getEnchantmentLevel(enchant)};
 		
 	}
 

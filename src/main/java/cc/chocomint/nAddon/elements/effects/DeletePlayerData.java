@@ -1,7 +1,10 @@
 package cc.chocomint.nAddon.elements.effects;
 
+import java.io.File;
+
 import javax.annotation.Nullable;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
@@ -12,12 +15,12 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
 
-public class RespawnPlayer extends Effect {
+public class DeletePlayerData extends Effect {
 	
 	private Expression<Player> ex_player;
 	
 	static {
-		Skript.registerEffect(RespawnPlayer.class, "force respawn %player%");
+		Skript.registerEffect(DeletePlayerData.class, "delete %player%'s playerdata");
 		Main.Effects ++;
 	}
 
@@ -32,7 +35,7 @@ public class RespawnPlayer extends Effect {
 
 	@Override
 	public String toString(@Nullable Event e, boolean debug) {
-		return "RespawnPlayer";
+		return "DeletePlayerData";
 	}
 
 	@Override
@@ -40,7 +43,11 @@ public class RespawnPlayer extends Effect {
 		
 		Player player = (Player) this.ex_player.getSingle(e);
 		
-		player.spigot().respawn();
+		File file = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
+		if(!file.exists()) {
+			file = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
+		}
+		file.delete();
 		
 	}
 

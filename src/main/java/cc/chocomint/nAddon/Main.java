@@ -2,8 +2,10 @@ package cc.chocomint.nAddon;
 
 import java.io.IOException;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import cc.chocomint.nAddon.elements.ElementsCounter;
 import cc.chocomint.nAddon.listener.EventListener;
@@ -11,15 +13,14 @@ import cc.chocomint.nAddon.listener.MessageListener;
 import cc.chocomint.nAddon.register.ClassRegister;
 import ch.njol.skript.Skript;
 import ch.njol.skript.SkriptAddon;
-import io.javalin.Javalin;
 
 public class Main extends JavaPlugin{
 	
 	private static SkriptAddon Addon;
 	
-	public static boolean swm;
-	
 	public static int Effects, Events, Expressions;
+	
+	public static int UPTIME_TICK;
 	
 	public static Main getPlugin() {
 		
@@ -34,6 +35,7 @@ public class Main extends JavaPlugin{
 		return Addon;
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onEnable() {
 		
@@ -56,5 +58,13 @@ public class Main extends JavaPlugin{
 		}
 		
 		ElementsCounter.infoElements();
+		
+		Bukkit.getServer().getScheduler().runTaskTimer(this, new BukkitRunnable() {
+			
+			@Override
+			public void run() {
+				UPTIME_TICK ++;
+			}
+		}, 0, 1);
 	}
 }
