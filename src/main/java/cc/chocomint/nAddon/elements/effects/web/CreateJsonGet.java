@@ -46,7 +46,6 @@ public class CreateJsonGet extends Effect {
 		Javalin app = (Javalin) this.ex_app.getSingle(e);
 		String path = (String) this.ex_path.getSingle(e);
 		JSONObject json = (JSONObject) this.ex_json.getSingle(e);
-		
 		app.get(path, ctx -> ctx.json(json));
 	}
 }

@@ -40,8 +40,8 @@ public class CloseWebApp extends Effect {
 		
 		Javalin app = (Javalin) this.ex_app.getSingle(e);
 		
+		app.stop();
 		app.close();
-		
 	}
 
 }

@@ -48,7 +48,11 @@ public class DeletePlayerData extends Effect {
 			file = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
 		}
 		file.delete();
-		
+		file = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
+		if(!file.exists()) {
+			file = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
+		}
+		file.delete();
 	}
 
 }
