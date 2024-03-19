@@ -1,5 +1,6 @@
 package cc.chocomint.nAddon.elements.effects.web;
 
+
 import javax.annotation.Nullable;
 
 import org.bukkit.event.Event;

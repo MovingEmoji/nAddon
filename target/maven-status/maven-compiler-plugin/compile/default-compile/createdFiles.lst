@@ -1,11 +1,13 @@
 cc\chocomint\nAddon\elements\effects\packet\SetPlayerTime.class
 cc\chocomint\nAddon\elements\expressions\event\EventVelocity.class
+cc\chocomint\nAddon\elements\events\TeleportEvent$3.class
 cc\chocomint\nAddon\elements\expressions\SortExprs.class
 cc\chocomint\nAddon\elements\effects\citizen\CreateNPC.class
 cc\chocomint\nAddon\elements\effects\packet\DeleteStuffArrow.class
 cc\chocomint\nAddon\elements\effects\LoadTemplateWorld.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamPrefix.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamSuffix.class
+cc\chocomint\nAddon\customevents\CreatedDynamicValueEvent.class
 cc\chocomint\nAddon\elements\expressions\NormalizedVelocity.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\MainScoreboard.class
 cc\chocomint\nAddon\elements\effects\scoreboard\SetScoreboard.class
@@ -14,6 +16,7 @@ cc\chocomint\nAddon\elements\effects\web\CloseWebApp.class
 cc\chocomint\nAddon\elements\effects\DeletePlayerData.class
 cc\chocomint\nAddon\elements\expressions\event\EventItemDamage$1.class
 cc\chocomint\nAddon\elements\expressions\event\EventItemDamage.class
+cc\chocomint\nAddon\elements\events\TeleportEvent.class
 cc\chocomint\nAddon\Main.class
 cc\chocomint\nAddon\elements\effects\ConnectServer.class
 cc\chocomint\nAddon\elements\events\ItemDamageEvent.class
@@ -42,10 +45,12 @@ cc\chocomint\nAddon\elements\effects\scoreboard\EntryTeam.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\PlayerScoreboard.class
 cc\chocomint\nAddon\Main$1.class
 cc\chocomint\nAddon\elements\effects\citizen\NPCLookTarget.class
+cc\chocomint\nAddon\elements\events\TeleportEvent$1.class
 cc\chocomint\nAddon\elements\effects\PlaySound.class
 cc\chocomint\nAddon\elements\effects\SetFireTick.class
 cc\chocomint\nAddon\elements\effects\packet\HidePlayer.class
 cc\chocomint\nAddon\elements\expressions\UpTimeTick.class
+cc\chocomint\nAddon\elements\effects\SetDynamicValue.class
 cc\chocomint\nAddon\elements\effects\tablist\SetTabName.class
 cc\chocomint\nAddon\elements\effects\ThrowPotion.class
 cc\chocomint\nAddon\elements\expressions\serializer\StringFromItem.class
@@ -63,6 +68,7 @@ cc\chocomint\nAddon\elements\effects\scoreboard\DeletePlayerSidebar.class
 cc\chocomint\nAddon\elements\expressions\json\CreateJson.class
 cc\chocomint\nAddon\elements\effects\scoreboard\SetSidebarScore.class
 cc\chocomint\nAddon\elements\effects\json\PutValue.class
+cc\chocomint\nAddon\elements\events\TeleportEvent$2.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent$3.class
 cc\chocomint\nAddon\elements\effects\AttackEntity.class
 cc\chocomint\nAddon\elements\ElementsCounter.class

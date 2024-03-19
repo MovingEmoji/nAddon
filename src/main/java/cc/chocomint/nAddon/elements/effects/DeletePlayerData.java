@@ -43,16 +43,18 @@ public class DeletePlayerData extends Effect {
 		
 		Player player = (Player) this.ex_player.getSingle(e);
 		
-		File file = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
-		if(!file.exists()) {
-			file = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
+		File datafile = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
+		File statsfile = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
+		if(!datafile.exists()) {
+			datafile = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/playerdata/" + player.getUniqueId() + ".dat");
 		}
-		file.delete();
-		file = new File(player.getWorld().getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
-		if(!file.exists()) {
-			file = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
+
+		if(!statsfile.exists()) {
+			statsfile = new File(Bukkit.getWorld("world").getWorldFolder().getAbsolutePath() + "/stats/" + player.getUniqueId() + ".json");
 		}
-		file.delete();
+		statsfile.delete();
+		datafile.delete();
+		
 	}
 
 }

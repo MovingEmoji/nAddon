@@ -16,6 +16,8 @@ import io.javalin.Javalin;
 
 public class RegisterWebApp extends SimpleExpression<Javalin> {
 	
+	public static Javalin WEB_APP;
+	
 	private Expression<Number> ex_port;
 	
 	static {
@@ -55,10 +57,18 @@ public class RegisterWebApp extends SimpleExpression<Javalin> {
 		ClassLoader mainloader = Thread.currentThread().getContextClassLoader();
 		
 		Thread.currentThread().setContextClassLoader(Main.class.getClassLoader());
-		Javalin app = Javalin.create().start(port.intValue());
+		Javalin app = Javalin.create(config -> {
+			config.plugins.enableCors( cors -> {
+				cors.add( it -> {
+					it.anyHost();
+				});
+			});
+		}).start(port.intValue());
 		Thread.currentThread().setContextClassLoader(mainloader);
 		
 		Bukkit.getLogger().info("Starting WebApp...");
+		
+		WEB_APP = app;
 		
 		return new Javalin[] {app};
 	}
