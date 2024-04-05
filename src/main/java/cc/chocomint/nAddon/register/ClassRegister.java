@@ -9,6 +9,7 @@ import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.registrations.Classes;
 import io.javalin.Javalin;
 import net.citizensnpcs.api.npc.NPC;
+import net.citizensnpcs.util.PlayerAnimation;
 
 public class ClassRegister {
 	
@@ -18,9 +19,9 @@ public class ClassRegister {
 		Classes.registerClass(new ClassInfo<Team>(Team.class, "team"));
 		if(Main.getPlugin().getConfig().getBoolean("citizen") == true) {
 			Classes.registerClass(new ClassInfo<NPC>(NPC.class, "npc"));
+			Classes.registerClass(new ClassInfo<PlayerAnimation>(PlayerAnimation.class, "playeranimation"));
 		}
 		Classes.registerClass(new ClassInfo<Javalin>(Javalin.class, "javalin"));
 		Classes.registerClass(new ClassInfo<JSONObject>(JSONObject.class, "json"));
-		
 	}
 }

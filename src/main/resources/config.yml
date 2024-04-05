@@ -1,3 +1,5 @@
 slimeworld: false
 citizen: false
 webdynamicvalue: false
+proxytunnel: false
+tunnelip: 0.0.0.0

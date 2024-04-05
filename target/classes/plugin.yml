@@ -2,7 +2,7 @@ name: "nAddon"
 version: "1.1.0"
 description: Emotional addon for new generation Practice server
 author: Naoya
-website: https://twitter.com/MovingEmoji_
+website: https://twitter.com/MovingEmoji
 main: "cc.chocomint.nAddon.Main"
 depend: ["Skript"]
 api-version: 1.8

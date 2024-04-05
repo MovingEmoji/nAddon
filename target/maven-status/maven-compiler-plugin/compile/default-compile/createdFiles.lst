@@ -26,6 +26,7 @@ cc\chocomint\nAddon\elements\effects\RespawnPlayer.class
 cc\chocomint\nAddon\elements\expressions\ChangeWorld.class
 cc\chocomint\nAddon\listener\EventListener.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamSuffix$1.class
+cc\chocomint\nAddon\elements\effects\BlockParticle.class
 cc\chocomint\nAddon\elements\expressions\NoDamageTick.class
 cc\chocomint\nAddon\customevents\PluginMessageRecievedEvent.class
 cc\chocomint\nAddon\elements\effects\SetDamageDelay.class
@@ -33,10 +34,13 @@ cc\chocomint\nAddon\elements\events\PlayerMovement$1.class
 cc\chocomint\nAddon\elements\events\PlayerMovement.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\NewScoreboard.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamPrefix$1.class
+cc\chocomint\nAddon\elements\effects\citizen\AnimateNPC.class
 cc\chocomint\nAddon\elements\events\ItemDamageEvent$3.class
 cc\chocomint\nAddon\elements\events\VelocityEvent.class
 cc\chocomint\nAddon\elements\effects\packet\RevealPlayer.class
 cc\chocomint\nAddon\elements\effects\web\CreateJsonGet.class
+cc\chocomint\nAddon\elements\expressions\citizen\LastCreatedNPC.class
+cc\chocomint\nAddon\elements\expressions\item\ShinyItem.class
 cc\chocomint\nAddon\elements\expressions\event\EventVelocity$1.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent$2.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\RegisterTeam.class
@@ -45,10 +49,13 @@ cc\chocomint\nAddon\elements\effects\scoreboard\EntryTeam.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\PlayerScoreboard.class
 cc\chocomint\nAddon\Main$1.class
 cc\chocomint\nAddon\elements\effects\citizen\NPCLookTarget.class
+cc\chocomint\nAddon\elements\effects\citizen\TeleportNPC.class
+cc\chocomint\nAddon\elements\expressions\PlayerAddress.class
 cc\chocomint\nAddon\elements\events\TeleportEvent$1.class
 cc\chocomint\nAddon\elements\effects\PlaySound.class
 cc\chocomint\nAddon\elements\effects\SetFireTick.class
 cc\chocomint\nAddon\elements\effects\packet\HidePlayer.class
+cc\chocomint\nAddon\elements\expressions\item\GetItemMeta.class
 cc\chocomint\nAddon\elements\expressions\UpTimeTick.class
 cc\chocomint\nAddon\elements\effects\SetDynamicValue.class
 cc\chocomint\nAddon\elements\effects\tablist\SetTabName.class
@@ -65,10 +72,12 @@ cc\chocomint\nAddon\elements\effects\tablist\CustomTablist.class
 cc\chocomint\nAddon\elements\expressions\json\JsonValue.class
 cc\chocomint\nAddon\elements\effects\scoreboard\CreatePlayerSidebar.class
 cc\chocomint\nAddon\elements\effects\scoreboard\DeletePlayerSidebar.class
+cc\chocomint\nAddon\elements\effects\citizen\DestroyNPC.class
 cc\chocomint\nAddon\elements\expressions\json\CreateJson.class
 cc\chocomint\nAddon\elements\effects\scoreboard\SetSidebarScore.class
 cc\chocomint\nAddon\elements\effects\json\PutValue.class
 cc\chocomint\nAddon\elements\events\TeleportEvent$2.class
+cc\chocomint\nAddon\elements\expressions\item\EnchantLevel.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent$3.class
 cc\chocomint\nAddon\elements\effects\AttackEntity.class
 cc\chocomint\nAddon\elements\ElementsCounter.class
@@ -77,7 +86,6 @@ cc\chocomint\nAddon\elements\expressions\serializer\StringInventory.class
 cc\chocomint\nAddon\elements\events\ItemDamageEvent$2.class
 cc\chocomint\nAddon\elements\effects\packet\ClientBlock.class
 cc\chocomint\nAddon\elements\expressions\serializer\ItemsFromString.class
-cc\chocomint\nAddon\elements\expressions\EnchantLevel.class
 cc\chocomint\nAddon\elements\effects\SetInventoryFromString.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent.class
 cc\chocomint\nAddon\elements\expressions\serializer\ItemFromString.class

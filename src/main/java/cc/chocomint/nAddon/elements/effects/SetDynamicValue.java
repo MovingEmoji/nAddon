@@ -44,8 +44,10 @@ public class SetDynamicValue extends Effect {
 
 	@Override
 	protected void execute(Event e) {
-		String key = (String) ex_key.getSingle(e);
-		JSONObject json = (JSONObject) ex_json.getSingle(e);
+		
+		String key = (String) this.ex_key.getSingle(e);
+		JSONObject json = (JSONObject) this.ex_json.getSingle(e);
+		
 		boolean firstcreate = false;
 		if(DynamicValue.get(key) == null) {
 			firstcreate = true;
