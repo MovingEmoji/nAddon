@@ -1,11 +1,15 @@
 package cc.chocomint.nAddon;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import cc.chocomint.nAddon.elements.ElementsCounter;
 import cc.chocomint.nAddon.listener.EventListener;
@@ -21,6 +25,8 @@ public class Main extends JavaPlugin{
 	public static int Effects, Events, Expressions;
 	
 	public static int UPTIME_TICK;
+	
+	public static JSONObject userCache;
 	
 	public static Main getPlugin() {
 		
@@ -45,6 +51,8 @@ public class Main extends JavaPlugin{
 		getServer().getMessenger().registerOutgoingPluginChannel((Plugin)this, "BungeeCord");
 		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
 		
+		loadUserCache();
+		
 		Addon = Skript.registerAddon(this);
 		
 		ClassRegister.registerAllSkriptClasses();
@@ -66,5 +74,19 @@ public class Main extends JavaPlugin{
 				UPTIME_TICK ++;
 			}
 		}, 0, 1);
+	}
+	
+	private void loadUserCache() {
+		File userCacheFile = new File(Bukkit.getServer().getWorldContainer(), "usercache.json");
+		if (userCacheFile.exists()) {
+			try (FileReader reader = new FileReader(userCacheFile)) {
+				JSONParser parser = new JSONParser();
+				userCache = (JSONObject) parser.parse(reader);
+			} catch (Exception e) {
+				getLogger().warning("usercache.jsonを読み込めませんでした。");
+			}
+		} else {
+			getLogger().warning("usercache.jsonが見つかりませんでした。");
+		}
 	}
 }

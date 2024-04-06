@@ -4,6 +4,7 @@ cc\chocomint\nAddon\elements\events\TeleportEvent$3.class
 cc\chocomint\nAddon\elements\expressions\SortExprs.class
 cc\chocomint\nAddon\elements\effects\citizen\CreateNPC.class
 cc\chocomint\nAddon\elements\effects\packet\DeleteStuffArrow.class
+cc\chocomint\nAddon\elements\effects\CommonParticle.class
 cc\chocomint\nAddon\elements\effects\LoadTemplateWorld.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamPrefix.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\TeamSuffix.class
@@ -42,6 +43,7 @@ cc\chocomint\nAddon\elements\effects\web\CreateJsonGet.class
 cc\chocomint\nAddon\elements\expressions\citizen\LastCreatedNPC.class
 cc\chocomint\nAddon\elements\expressions\item\ShinyItem.class
 cc\chocomint\nAddon\elements\expressions\event\EventVelocity$1.class
+cc\chocomint\nAddon\elements\expressions\PlayerNameFromUUID.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent$2.class
 cc\chocomint\nAddon\elements\expressions\scoreboard\RegisterTeam.class
 cc\chocomint\nAddon\elements\effects\json\RemoveValue.class

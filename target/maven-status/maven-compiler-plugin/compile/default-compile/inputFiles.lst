@@ -29,6 +29,7 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\PlayerAddress.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\web\RegisterWebApp.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\customevents\CreatedDynamicValueEvent.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\PlayerNameFromUUID.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\events\ItemDamageEvent.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\NormalizedVelocity.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\scoreboard\DeletePlayerSidebar.java
@@ -48,6 +49,7 @@ C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\pac
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\SetDynamicValue.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\events\PluginMessageEvent.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\expressions\json\CreateJson.java
+C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\CommonParticle.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\ConnectServer.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\ThrowPotion.java
 C:\Users\naoya\git\nAddon\src\main\java\cc\chocomint\nAddon\elements\effects\packet\HideEntity.java
