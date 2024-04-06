@@ -9,7 +9,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import cc.chocomint.nAddon.elements.ElementsCounter;
@@ -75,6 +74,7 @@ public class Main extends JavaPlugin{
 				UPTIME_TICK ++;
 			}
 		}, 0, 1);
+		
 	}
 	
 	private void loadUserCache() {
