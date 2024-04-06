@@ -91,5 +91,6 @@ cc\chocomint\nAddon\elements\ElementsCounter.class
 cc\chocomint\nAddon\elements\effects\ClearAllPotionEffects.class
 cc\chocomint\nAddon\elements\effects\packet\ClientBlock.class
 cc\chocomint\nAddon\elements\expressions\serializer\ItemsFromString.class
+cc\chocomint\nAddon\elements\expressions\Hologram.class
 cc\chocomint\nAddon\elements\effects\SetInventoryFromString.class
 cc\chocomint\nAddon\elements\events\PluginMessageEvent.class
