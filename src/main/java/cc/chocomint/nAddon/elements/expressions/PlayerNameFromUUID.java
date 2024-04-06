@@ -50,8 +50,7 @@ public class PlayerNameFromUUID extends SimpleExpression<String> {
 		String uuid = (String) ex_uuid.getSingle(e);
 		String username = null;
 		if (Main.userCache != null) {
-			JSONArray array = (JSONArray) Main.userCache.get("");
-			for (Object obj : array) {
+			for (Object obj : Main.userCache) {
 				JSONObject profile = (JSONObject) obj;
 				String profileUUID = (String) profile.get("uuid");
 				if (profileUUID.equals(uuid)) {
