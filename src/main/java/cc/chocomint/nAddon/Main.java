@@ -72,6 +72,7 @@ public class Main extends JavaPlugin{
 			@Override
 			public void run() {
 				UPTIME_TICK ++;
+				loadUserCache();
 			}
 		}, 0, 1);
 		
