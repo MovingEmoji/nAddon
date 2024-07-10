@@ -5,7 +5,6 @@ import javax.annotation.Nullable;
 import org.bukkit.Location;
 import org.bukkit.event.Event;
 
-
 import cc.chocomint.nAddon.Main;
 import cc.chocomint.nAddon.elements.expressions.citizen.LastCreatedNPC;
 import ch.njol.skript.Skript;
@@ -70,7 +69,6 @@ public class CreateNPC extends Effect {
 		}
 		
 	}
-	@SuppressWarnings("unused")
 	private org.bukkit.entity.EntityType convert(String type) {
 	    return org.bukkit.entity.EntityType.valueOf(type.toUpperCase().replace(" ", "_").trim());
 	  }
