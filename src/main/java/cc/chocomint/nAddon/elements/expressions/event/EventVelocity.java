@@ -48,6 +48,7 @@ public class EventVelocity extends SimpleExpression<Vector> {
 		return new Vector[] {((PlayerVelocityEvent) e).getVelocity()};
 	}
 	
+	@Override
 	public void change(Event e, Object[] delta, Changer.ChangeMode mode) {
 		
 		switch(mode) {
@@ -62,6 +63,7 @@ public class EventVelocity extends SimpleExpression<Vector> {
 		
 	}
 	
+	@Override
 	public Class<?>[] acceptChange(Changer.ChangeMode mode) {
 		
 		switch(mode) {

@@ -47,6 +47,7 @@ public class EventItemDamage extends SimpleExpression<Number> {
 		return new Number[] {(Number) ((PlayerItemDamageEvent) e).getDamage()};
 	}
 	
+	@Override
 	public void change(Event e, Object[] delta, Changer.ChangeMode mode) {
 		
 		Number damage = (Number) delta[0];
@@ -69,6 +70,7 @@ public class EventItemDamage extends SimpleExpression<Number> {
 		}
 	}
 	
+	@Override
 	public Class<?>[] acceptChange(Changer.ChangeMode mode) {
 		
 		switch(mode) {
