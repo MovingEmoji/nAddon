@@ -19,7 +19,7 @@ import ch.njol.util.coll.CollectionUtils;
 public class EventVelocity extends SimpleExpression<Vector> {
 	
 	static {
-		Skript.registerExpression(EventVelocity.class, Vector.class, ExpressionType.SIMPLE, "event velocity");
+		Skript.registerExpression(EventVelocity.class, Vector.class, ExpressionType.COMBINED, "event-velocity");
 		Main.Expressions ++;
 	}
 
@@ -68,7 +68,7 @@ public class EventVelocity extends SimpleExpression<Vector> {
 		
 		switch(mode) {
 			case SET:
-				return (Class[]) CollectionUtils.array((Object) new Class[] {Vector.class});
+				return (Class[]) CollectionUtils.array((Object[]) new Class[] {Vector.class});
 				
 			default:
 				return null;
