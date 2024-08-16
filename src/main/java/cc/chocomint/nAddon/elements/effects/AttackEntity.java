@@ -2,8 +2,11 @@ package cc.chocomint.nAddon.elements.effects;
 
 import javax.annotation.Nullable;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.Event;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 import cc.chocomint.nAddon.Main;
 import ch.njol.skript.Skript;
@@ -39,14 +42,17 @@ public class AttackEntity extends Effect {
 		return "AttackEntity";
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void execute(Event e) {
 		
 		LivingEntity attacker = (LivingEntity) this.ex_attacker.getSingle(e);
 		LivingEntity victim = (LivingEntity) this.ex_victim.getSingle(e);
 		Number damage = (Number) this.ex_damage.getSingle(e);
-		
+		EntityDamageByEntityEvent event = new EntityDamageByEntityEvent(attacker, victim, DamageCause.ENTITY_ATTACK, damage.doubleValue());
 		victim.damage(damage.doubleValue(), attacker);
+		Bukkit.getPluginManager().callEvent(event);
+		
 		
 	}
 
