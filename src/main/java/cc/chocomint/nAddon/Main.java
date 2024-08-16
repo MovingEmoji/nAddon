@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.json.simple.JSONArray;
@@ -30,7 +29,7 @@ public class Main extends JavaPlugin{
 	
 	public static Main getPlugin() {
 		
-		return (Main) JavaPlugin.getPlugin(Main.class);
+		return JavaPlugin.getPlugin(Main.class);
 	}
 	
 	public static SkriptAddon getAddon() {
@@ -48,8 +47,8 @@ public class Main extends JavaPlugin{
 		saveDefaultConfig();
 		
 		getServer().getPluginManager().registerEvents(new EventListener(), getPlugin());
-		getServer().getMessenger().registerOutgoingPluginChannel((Plugin)this, "BungeeCord");
-		getServer().getMessenger().registerIncomingPluginChannel((Plugin)this, "BungeeCord", new MessageListener());
+		getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+		getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new MessageListener());
 		
 		loadUserCache();
 		
