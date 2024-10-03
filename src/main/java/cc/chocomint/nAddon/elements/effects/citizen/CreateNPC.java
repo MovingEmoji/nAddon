@@ -71,6 +71,6 @@ public class CreateNPC extends Effect {
 	}
 	private org.bukkit.entity.EntityType convert(String type) {
 	    return org.bukkit.entity.EntityType.valueOf(type.toUpperCase().replace(" ", "_").trim());
-	  }
+	}
 
 }
