@@ -32,7 +32,7 @@ public class TeleportEvent extends SkriptEvent {
 			public Location get(EntityTeleportEvent e) {
 				return e.getTo();
 			}
-		}, 0);
+		}, EventValues.TIME_FUTURE);
 		
 		EventValues.registerEventValue(EntityTeleportEvent.class, Location.class, new Getter<Location, EntityTeleportEvent>() {
 			@Nullable
