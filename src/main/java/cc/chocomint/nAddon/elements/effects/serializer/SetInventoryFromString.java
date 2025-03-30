@@ -1,4 +1,4 @@
-package cc.chocomint.nAddon.elements.effects;
+package cc.chocomint.nAddon.elements.effects.serializer;
 
 import java.io.ByteArrayInputStream;
 
