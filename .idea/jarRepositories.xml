@@ -22,6 +22,11 @@
       <option name="url" value="https://repo.skriptlang.org/releases" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="dmulloy2-repo" />
+      <option name="name" value="dmulloy2-repo" />
+      <option name="url" value="https://repo.dmulloy2.net/repository/public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="glaremasters" />
       <option name="name" value="glaremasters" />
       <option name="url" value="https://repo.glaremasters.me/repository/concuncan/" />
