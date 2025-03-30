@@ -2,6 +2,7 @@ package cc.chocomint.nAddon.elements.expressions.web;
 
 import javax.annotation.Nullable;
 
+import cc.chocomint.nAddon.elements.effects.web.SetDynamicValue;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 
@@ -69,7 +70,11 @@ public class RegisterWebApp extends SimpleExpression<Javalin> {
 		Bukkit.getLogger().info("Starting WebApp...");
 		
 		WEB_APP = app;
-		
+		if(Main.getPlugin().getConfig().getBoolean("webdynamicvalue")) {
+			WEB_APP.get("dynamicvalue", ctx -> {
+				ctx.json(SetDynamicValue.dynamicjson);
+			});
+		}
 		return new Javalin[] {app};
 	}
 

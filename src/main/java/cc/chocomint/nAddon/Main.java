@@ -3,8 +3,15 @@ package cc.chocomint.nAddon;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Map;
 
+import cc.chocomint.nAddon.elements.effects.packet.TagAboveHead;
+import cc.chocomint.nAddon.listener.PacketListener;
+import net.minecraft.server.v1_8_R3.PacketPlayOutEntityDestroy;
 import org.bukkit.Bukkit;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.json.simple.JSONArray;
@@ -63,7 +70,8 @@ public class Main extends JavaPlugin{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
+		PacketListener.registerPacketListener();
 		ElementsCounter.infoElements();
 		
 		Bukkit.getServer().getScheduler().runTaskTimer(this, new BukkitRunnable() {
@@ -72,6 +80,10 @@ public class Main extends JavaPlugin{
 			public void run() {
 				UPTIME_TICK ++;
 				loadUserCache();
+				for(Map.Entry<String, ArmorStand> entry : TagAboveHead.tags.entrySet()) {
+					PacketPlayOutEntityDestroy packet = new PacketPlayOutEntityDestroy(entry.getValue().getEntityId());
+					((CraftPlayer) Bukkit.getPlayer(entry.getKey())).getHandle().playerConnection.sendPacket(packet);;
+				}
 			}
 		}, 0, 1);
 		
