@@ -1,4 +1,4 @@
-package cc.chocomint.nAddon.elements.effects;
+package cc.chocomint.nAddon.elements.effects.packet;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
